@@ -1,0 +1,1309 @@
+-- Flattened Boolean FSM model  generated from production-cell-test.smv
+-- Dumped cwd->layers are: model model_bool determ determ_bool __TempLayer_0 
+
+MODULE main
+-- Input variables from layer 'model'
+-- Input variables from layer 'model_bool'
+-- Input variables from layer 'determ'
+-- Input variables from layer 'determ_bool'
+-- Input variables from layer '__TempLayer_0'
+-- State variables from layer 'model'
+
+VAR
+s.deliv : boolean;
+
+VAR
+s.crit : boolean;
+
+VAR
+s.ff : boolean;
+s.tl : boolean;
+s.pl : boolean;
+s.brl : boolean;
+s.pbe : boolean;
+s.pfl : boolean;
+s.maxRot : boolean;
+s.minRot : boolean;
+s.topPos : boolean;
+s.botPos : boolean;
+
+VAR
+s.topPosP : boolean;
+s.midPosP : boolean;
+s.botPosP : boolean;
+s.fc : boolean;
+s.pbl : boolean;
+s.gob : boolean;
+s.gof : boolean;
+
+VAR
+monitor.LTL_0_SPECF_31 : boolean;
+monitor.LTL_0_SPECF_29 : boolean;
+monitor.LTL_0_SPECF_27 : boolean;
+monitor.LTL_0_SPECF_25 : boolean;
+monitor.LTL_0_SPECF_23 : boolean;
+monitor.LTL_0_SPECF_21 : boolean;
+monitor.LTL_0_SPECF_19 : boolean;
+monitor.LTL_0_SPECF_17 : boolean;
+monitor.LTL_0_SPECF_15 : boolean;
+monitor.LTL_0_SPECF_13 : boolean;
+monitor.LTL_0_SPECF_11 : boolean;
+monitor.LTL_0_SPECF_9 : boolean;
+monitor.LTL_0_SPECF_7 : boolean;
+monitor.LTL_0_SPECF_5 : boolean;
+monitor.LTL_0_SPECF_3 : boolean;
+monitor.LTL_0_SPECF_1 : boolean;
+
+-- State variables from layer 'model_bool'
+VAR
+s.FBM.0 : boolean;
+s.TEM.1 : boolean;
+s.TEM.0 : boolean;
+s.TRM.1 : boolean;
+s.TRM.0 : boolean;
+s.A1M.1 : boolean;
+s.A1M.0 : boolean;
+s.A2M.1 : boolean;
+s.A2M.0 : boolean;
+s.RRM.1 : boolean;
+s.RRM.0 : boolean;
+s.A1Mag.0 : boolean;
+s.A2Mag.0 : boolean;
+s.PM.1 : boolean;
+s.PM.0 : boolean;
+s.DBM.0 : boolean;
+s.CHM.1 : boolean;
+s.CHM.0 : boolean;
+s.CVM.1 : boolean;
+s.CVM.0 : boolean;
+s.CMag.0 : boolean;
+s.a1ext.1 : boolean;
+s.a1ext.0 : boolean;
+s.a2ext.1 : boolean;
+s.a2ext.0 : boolean;
+s.angle.1 : boolean;
+s.angle.0 : boolean;
+s.gvp.1 : boolean;
+s.gvp.0 : boolean;
+s.angle_status.1 : boolean;
+s.angle_status.0 : boolean;
+s.press_status.1 : boolean;
+s.press_status.0 : boolean;
+s.gripper_status.1 : boolean;
+s.gripper_status.0 : boolean;
+
+-- State variables from layer 'determ'
+-- State variables from layer 'determ_bool'
+-- State variables from layer '__TempLayer_0'
+-- Frozen variables from layer 'model'
+-- Frozen variables from layer 'model_bool'
+-- Frozen variables from layer 'determ'
+-- Frozen variables from layer 'determ_bool'
+-- Frozen variables from layer '__TempLayer_0'
+
+INIT
+ s.FBM.0
+
+INIT
+ __expr67
+
+INIT
+ __expr50
+
+INIT
+ __expr43
+
+INIT
+ s.TEM.0
+
+INIT
+ __expr45
+
+INIT
+ s.TRM.0
+
+INIT
+ __expr33
+
+INIT
+ s.A1M.0
+
+INIT
+ __expr16
+
+INIT
+ s.A2M.0
+
+INIT
+ __expr68
+
+INIT
+ s.RRM.0
+
+INIT
+ s.A1Mag.0
+
+INIT
+ s.A2Mag.0
+
+INIT
+ __expr24
+
+INIT
+ s.PM.0
+
+INIT
+ s.DBM.0
+
+INIT
+ __expr12
+
+INIT
+ __expr6
+
+INIT
+ s.CHM.0
+
+INIT
+ __expr1
+
+INIT
+ s.CVM.0
+
+INIT
+ __expr9
+
+INIT
+ __expr69
+
+INIT
+ s.tl
+
+INIT
+ s.pl
+
+INIT
+ __expr70
+
+INIT
+ s.pbe
+
+INIT
+ s.pfl
+
+INIT
+ __expr42
+
+INIT
+ s.minRot
+
+INIT
+ __expr41
+
+INIT
+ s.botPos
+
+INIT
+ __expr36
+
+INIT
+ s.a1ext.0
+
+INIT
+ __expr19
+
+INIT
+ s.a2ext.0
+
+INIT
+ !s.angle.1
+
+INIT
+ !s.angle.0
+
+INIT
+ __expr28
+
+INIT
+ __expr30
+
+INIT
+ s.botPosP
+
+INIT
+ !s.fc
+
+INIT
+ __expr71
+
+INIT
+ s.gob
+
+INIT
+ __expr3
+
+INIT
+ __expr2
+
+INIT
+ !s.gvp.0
+
+INIT
+ s.angle_status.1
+
+INIT
+ s.angle_status.0
+
+INIT
+ !s.press_status.1
+
+INIT
+ s.press_status.0
+
+INIT
+ s.gripper_status.1
+
+
+INVAR
+ (__expr43 | !s.TEM.0)
+
+INVAR
+ (__expr45 | !s.TRM.0)
+
+INVAR
+ (__expr33 | !s.A1M.0)
+
+INVAR
+ (__expr16 | !s.A2M.0)
+
+INVAR
+ (__expr68 | !s.RRM.0)
+
+INVAR
+ (__expr24 | !s.PM.0)
+
+INVAR
+ (__expr6 | !s.CHM.0)
+
+INVAR
+ (__expr1 | !s.CVM.0)
+
+INVAR
+ (__expr36 | !s.a1ext.0)
+
+INVAR
+ (__expr19 | !s.a2ext.0)
+
+INVAR
+ (__expr2 | !s.gvp.0)
+
+INVAR
+ (!s.press_status.1 | !s.press_status.0)
+
+INVAR
+ (__expr72 | !s.gripper_status.0)
+
+
+TRANS
+ ((__expr73 | (__expr124 & next(monitor.LTL_0_SPECF_1))) <-> monitor.LTL_0_SPECF_1)
+
+TRANS
+ (__expr124 <-> monitor.LTL_0_SPECF_3)
+
+TRANS
+ (__expr123 <-> monitor.LTL_0_SPECF_5)
+
+TRANS
+ (__expr122 <-> monitor.LTL_0_SPECF_7)
+
+TRANS
+ (__expr121 <-> monitor.LTL_0_SPECF_9)
+
+TRANS
+ (__expr120 <-> monitor.LTL_0_SPECF_11)
+
+TRANS
+ (__expr119 <-> monitor.LTL_0_SPECF_13)
+
+TRANS
+ (__expr118 <-> monitor.LTL_0_SPECF_15)
+
+TRANS
+ (__expr117 <-> monitor.LTL_0_SPECF_17)
+
+TRANS
+ (__expr116 <-> monitor.LTL_0_SPECF_19)
+
+TRANS
+ (__expr115 <-> monitor.LTL_0_SPECF_21)
+
+TRANS
+ (__expr114 <-> monitor.LTL_0_SPECF_23)
+
+TRANS
+ (__expr113 <-> monitor.LTL_0_SPECF_25)
+
+TRANS
+ (__expr112 <-> monitor.LTL_0_SPECF_27)
+
+TRANS
+ (__expr111 <-> monitor.LTL_0_SPECF_29)
+
+TRANS
+ (__expr110 <-> monitor.LTL_0_SPECF_31)
+
+TRANS
+ __expr132
+
+TRANS
+ __expr135
+
+TRANS
+ __expr138
+
+TRANS
+ __expr141
+
+TRANS
+ __expr142
+
+TRANS
+ __expr132
+
+TRANS
+ __expr135
+
+TRANS
+ __expr148
+
+TRANS
+ __expr151
+
+TRANS
+ __expr152
+
+TRANS
+ __expr153
+
+TRANS
+ __expr148
+
+TRANS
+ __expr154
+
+TRANS
+ __expr155
+
+TRANS
+ __expr151
+
+TRANS
+ __expr168
+
+TRANS
+ __expr177
+
+TRANS
+ __expr184
+
+TRANS
+ __expr186
+
+TRANS
+ __expr187
+
+TRANS
+ __expr188
+
+TRANS
+ __expr168
+
+TRANS
+ __expr190
+
+TRANS
+ __expr194
+
+TRANS
+ __expr195
+
+TRANS
+ __expr177
+
+TRANS
+ __expr197
+
+TRANS
+ __expr201
+
+TRANS
+ __expr184
+
+TRANS
+ __expr186
+
+TRANS
+ __expr190
+
+TRANS
+ __expr206
+
+TRANS
+ __expr208
+
+TRANS
+ __expr210
+
+TRANS
+ __expr211
+
+TRANS
+ __expr212
+
+TRANS
+ __expr215
+
+TRANS
+ __expr206
+
+TRANS
+ __expr220
+
+TRANS
+ __expr221
+
+TRANS
+ __expr222
+
+TRANS
+ __expr223
+
+TRANS
+ __expr220
+
+TRANS
+ __expr221
+
+TRANS
+ __expr226
+
+TRANS
+ __expr230
+
+TRANS
+ __expr231
+
+TRANS
+ __expr232
+
+TRANS
+ __expr233
+
+TRANS
+ __expr226
+
+TRANS
+ __expr236
+
+TRANS
+ __expr239
+
+TRANS
+ __expr230
+
+TRANS
+ __expr231
+
+TRANS
+ __expr138
+
+TRANS
+ __expr141
+
+TRANS
+ __expr187
+
+TRANS
+ __expr194
+
+TRANS
+ __expr222
+
+TRANS
+ __expr142
+
+TRANS
+ __expr154
+
+TRANS
+ __expr155
+
+TRANS
+ __expr152
+
+TRANS
+ __expr153
+
+TRANS
+ __expr188
+
+TRANS
+ __expr195
+
+TRANS
+ __expr197
+
+TRANS
+ __expr208
+
+TRANS
+ __expr210
+
+TRANS
+ __expr211
+
+TRANS
+ __expr212
+
+TRANS
+ __expr223
+
+TRANS
+ __expr232
+
+TRANS
+ __expr233
+
+TRANS
+ __expr236
+
+TRANS
+ __expr201
+
+TRANS
+ __expr215
+
+TRANS
+ __expr239
+
+
+FAIRNESS
+ (!__expr52 | __expr0)
+
+
+FAIRNESS
+ (!__expr53 | __expr51)
+
+
+FAIRNESS
+ (!__expr54 | __expr49)
+
+
+FAIRNESS
+ (!__expr55 | __expr48)
+
+
+FAIRNESS
+ (!__expr56 | __expr40)
+
+
+FAIRNESS
+ (!__expr57 | __expr38)
+
+
+FAIRNESS
+ (!__expr58 | __expr31)
+
+
+FAIRNESS
+ (!__expr59 | __expr29)
+
+
+FAIRNESS
+ (!__expr60 | __expr27)
+
+
+FAIRNESS
+ (!__expr61 | __expr23)
+
+
+FAIRNESS
+ (!__expr62 | __expr20)
+
+
+FAIRNESS
+ (!__expr63 | __expr14)
+
+
+FAIRNESS
+ (!__expr64 | __expr13)
+
+
+FAIRNESS
+ (!__expr65 | __expr11)
+
+
+FAIRNESS
+ (!__expr66 | __expr4)
+
+
+FAIRNESS
+ (!__expr67 | __expr0)
+
+
+
+LTLSPEC
+ F FALSE
+
+-- Symbols introduced by the dumper:
+DEFINE __expr39 := (!s.angle.1 & !s.angle.0) ;
+
+DEFINE __expr142 := (next(s.pfl) <-> ((__expr125 & __expr69) | (!__expr133 & s.pfl))) ;
+
+DEFINE __expr186 := case
+__expr164 : __expr185;
+(__expr165 | s.A1Mag.0) : next(s.A1Mag.0);
+TRUE : __expr185;
+esac ;
+
+DEFINE __expr135 := (next(s.deliv) <-> (((__expr126 & __expr127) & __expr128) | (__expr130 | (!__expr134 & s.deliv)))) ;
+
+DEFINE __expr34 := (__expr33 & !s.A1M.0) ;
+
+DEFINE __expr141 := (next(s.tl) <-> (!__expr140 & (__expr134 | s.tl))) ;
+
+DEFINE __expr72 := !s.gripper_status.1 ;
+
+DEFINE __expr10 := !s.pbe ;
+
+DEFINE __expr211 := (next(s.botPosP) <-> (!__expr209 & ((s.topPosP & s.PM.1) | s.botPosP))) ;
+
+DEFINE __expr125 := (!s.FBM.0 & __expr50) ;
+
+DEFINE __expr113 := (!(!next(s.topPos) | (!next(s.maxRot) | __expr109)) | (__expr112 & next(monitor.LTL_0_SPECF_25))) ;
+
+DEFINE __expr96 := (next(s.angle.1) & next(s.angle.0)) ;
+
+DEFINE __expr164 := ((__expr39 & __expr34) & s.a1ext.1) ;
+
+DEFINE __expr26 := !__expr25 ;
+
+DEFINE __expr13 := !(s.DBM.0 | __expr12) ;
+
+DEFINE __expr149 := !next(s.TRM.0) ;
+
+DEFINE __expr224 := !next(s.CHM.0) ;
+
+DEFINE __expr163 := !s.pl ;
+
+DEFINE __expr94 := (__expr93 & next(s.PM.0)) ;
+
+DEFINE __expr12 := !s.crit ;
+
+DEFINE __expr101 := !next(s.a1ext.1) ;
+
+DEFINE __expr109 := (!__expr106 | !__expr108) ;
+
+DEFINE __expr112 := (!(!next(s.botPos) | (!next(s.minRot) | __expr109)) | (__expr111 & next(monitor.LTL_0_SPECF_27))) ;
+
+DEFINE __expr184 := case
+(__expr140 | __expr176) : next(s.RRM.1);
+__expr167 : (__expr178 & __expr179);
+((__expr182 & __expr21) | (((__expr181 & __expr170) & __expr15) | ((__expr182 & __expr32) | ((((__expr180 & __expr183) & s.A1Mag.0) & s.A2Mag.0) & __expr39)))) : (__expr178 & next(s.RRM.0));
+s.RRM.1 : next(s.RRM.1);
+TRUE : (__expr178 & case
+s.RRM.0 : next(s.RRM.0);
+TRUE : __expr179;
+esac);
+esac ;
+
+DEFINE __expr196 := case
+s.angle.0 : next(s.angle.0);
+TRUE : __expr89;
+esac ;
+
+DEFINE __expr195 := case
+(__expr17 & __expr21) : __expr92;
+(__expr17 & __expr15) : next(s.a2ext.1);
+s.A2M.1 : (__expr88 & next(s.a2ext.0));
+s.a2ext.1 : next(s.a2ext.1);
+TRUE : (__expr88 & case
+s.a2ext.0 : next(s.a2ext.0);
+TRUE : __expr91;
+esac);
+esac ;
+
+DEFINE __expr83 := (__expr82 & next(s.angle.0)) ;
+
+DEFINE __expr134 := (__expr133 & !s.pfl) ;
+
+DEFINE __expr202 := !next(s.PM.0) ;
+
+DEFINE __expr150 := (__expr45 & !s.TRM.0) ;
+
+DEFINE __expr161 := !s.A1Mag.0 ;
+
+DEFINE __expr152 := (next(s.topPos) <-> (__expr145 | (__expr43 & s.topPos))) ;
+
+DEFINE __expr107 := !next(s.TRM.1) ;
+
+DEFINE __expr111 := (!(next(s.FBM.0) | !next(s.deliv)) | (__expr110 & next(monitor.LTL_0_SPECF_29))) ;
+
+DEFINE __expr220 := case
+__expr218 : next(s.DBM.0);
+(s.DBM.0 & __expr10) : __expr219;
+s.DBM.0 : next(s.DBM.0);
+TRUE : __expr219;
+esac ;
+
+DEFINE __expr79 := (__expr78 & next(s.CHM.0)) ;
+
+DEFINE __expr67 := (__expr0 | (__expr66 & monitor.LTL_0_SPECF_1)) ;
+
+DEFINE __expr45 := !s.TRM.1 ;
+
+DEFINE __expr233 := (next(s.gof) <-> (__expr225 | (__expr6 & s.gof))) ;
+
+DEFINE __expr21 := (s.angle.1 & !s.angle.0) ;
+
+DEFINE __expr230 := case
+(__expr227 & __expr9) : (__expr74 & __expr228);
+__expr193 : __expr80;
+(((((s.gof & __expr192) & __expr7) & __expr8) & __expr9) & s.ff) : next(s.CVM.1);
+__expr229 : __expr80;
+(s.CHM.1 & s.gob) : next(s.CVM.1);
+((s.gob & s.CVM.1) & __expr5) : __expr80;
+s.CVM.1 : next(s.CVM.1);
+TRUE : (__expr74 & case
+s.CVM.0 : next(s.CVM.0);
+TRUE : __expr228;
+esac);
+esac ;
+
+DEFINE __expr147 := (((__expr146 & __expr44) & __expr46) & __expr128) ;
+
+DEFINE __expr32 := (s.angle.1 & s.angle.0) ;
+
+DEFINE __expr100 := !__expr99 ;
+
+DEFINE __expr44 := (__expr43 & s.TEM.0) ;
+
+DEFINE __expr225 := (__expr6 & !s.CHM.0) ;
+
+DEFINE __expr175 := ((__expr15 & s.A2M.1) & __expr156) ;
+
+DEFINE __expr143 := (__expr127 & s.tl) ;
+
+DEFINE __expr110 := (__expr73 | next(monitor.LTL_0_SPECF_31)) ;
+
+DEFINE __expr24 := !s.PM.1 ;
+
+DEFINE __expr199 := !next(s.angle_status.0) ;
+
+DEFINE __expr132 := case
+(__expr126 & !__expr129) : next(s.FBM.0);
+__expr130 : __expr131;
+s.FBM.0 : next(s.FBM.0);
+TRUE : __expr131;
+esac ;
+
+DEFINE __expr177 := case
+(((((((((__expr21 & __expr139) & __expr156) & __expr157) & __expr158) & __expr159) & __expr161) & s.A2Mag.0) & (__expr169 & s.pl)) | ((((((((__expr15 & __expr139) & __expr156) & __expr157) & __expr158) & __expr159) & __expr161) & __expr170) & s.brl)) : __expr86;
+(__expr171 | __expr172) : __expr173;
+((((__expr21 & __expr22) & __expr159) & __expr170) | (((__expr15 & s.a2ext.1) & __expr159) & s.A2Mag.0)) : next(s.A2M.1);
+__expr176 : __expr173;
+s.A2M.1 : next(s.A2M.1);
+TRUE : (__expr84 & case
+s.A2M.0 : next(s.A2M.0);
+TRUE : __expr85;
+esac);
+esac ;
+
+DEFINE __expr66 := (__expr4 | (__expr65 & monitor.LTL_0_SPECF_3)) ;
+
+DEFINE __expr43 := !s.TEM.1 ;
+
+DEFINE __expr237 := !next(s.gripper_status.1) ;
+
+DEFINE __expr217 := (__expr216 & s.crit) ;
+
+DEFINE __expr153 := (next(s.botPos) <-> (s.TEM.1 | (!__expr145 & s.botPos))) ;
+
+DEFINE __expr8 := (__expr1 & s.CVM.0) ;
+
+DEFINE __expr219 := !next(s.DBM.0) ;
+
+DEFINE __expr98 := !next(s.A1M.0) ;
+
+DEFINE __expr19 := !s.a2ext.1 ;
+
+DEFINE __expr106 := (__expr105 & next(s.TEM.0)) ;
+
+DEFINE __expr236 := case
+((__expr5 & s.gripper_status.1) & __expr191) : __expr234;
+((__expr192 & (__expr72 & s.gripper_status.0)) & s.CVM.1) : next(s.gvp.1);
+(__expr235 & s.CVM.1) : __expr77;
+(__expr235 & __expr191) : __expr234;
+s.gvp.1 : next(s.gvp.1);
+TRUE : (__expr75 & case
+s.gvp.0 : next(s.gvp.0);
+TRUE : __expr76;
+esac);
+esac ;
+
+DEFINE __expr170 := !s.A2Mag.0 ;
+
+DEFINE __expr167 := ((__expr32 & s.A1M.1) & __expr139) ;
+
+DEFINE __expr159 := (__expr16 & s.A2M.0) ;
+
+DEFINE __expr148 := case
+__expr143 : (__expr105 & __expr144);
+(__expr145 & s.topPos) : __expr106;
+__expr147 : next(s.TEM.1);
+(s.TEM.1 & s.botPos) : __expr106;
+s.TEM.1 : next(s.TEM.1);
+TRUE : (__expr105 & case
+s.TEM.0 : next(s.TEM.0);
+TRUE : __expr144;
+esac);
+esac ;
+
+DEFINE __expr229 := ((s.CVM.1 & s.gvp.1) & s.gof) ;
+
+DEFINE __expr87 := !__expr86 ;
+
+DEFINE __expr65 := (__expr11 | (__expr64 & monitor.LTL_0_SPECF_5)) ;
+
+DEFINE __expr238 := !next(s.gripper_status.0) ;
+
+DEFINE __expr48 := !(__expr41 | (__expr42 | __expr47)) ;
+
+DEFINE __expr157 := (__expr68 & s.RRM.0) ;
+
+DEFINE __expr69 := !s.ff ;
+
+DEFINE __expr231 := case
+(((((s.gob & __expr5) & __expr7) & __expr8) & s.CMag.0) & s.pbe) : __expr81;
+(__expr229 | s.CMag.0) : next(s.CMag.0);
+TRUE : __expr81;
+esac ;
+
+DEFINE __expr210 := (next(s.midPosP) <-> (__expr209 | (!__expr207 & s.midPosP))) ;
+
+DEFINE __expr158 := (__expr33 & s.A1M.0) ;
+
+DEFINE __expr85 := !next(s.A2M.0) ;
+
+DEFINE __expr208 := (next(s.topPosP) <-> (!(s.topPosP & s.PM.1) & (__expr207 | s.topPosP))) ;
+
+DEFINE __expr76 := !next(s.gvp.0) ;
+
+DEFINE __expr64 := (__expr13 | (__expr63 & monitor.LTL_0_SPECF_7)) ;
+
+DEFINE __expr41 := !s.topPos ;
+
+DEFINE __expr35 := !__expr34 ;
+
+DEFINE __expr178 := !next(s.RRM.1) ;
+
+DEFINE __expr70 := !s.brl ;
+
+DEFINE __expr47 := (!__expr44 | !__expr46) ;
+
+DEFINE __expr189 := !next(s.A2Mag.0) ;
+
+DEFINE __expr75 := !next(s.gvp.1) ;
+
+DEFINE __expr171 := ((__expr21 & __expr17) & __expr22) ;
+
+DEFINE __expr166 := (__expr97 & next(s.A1M.0)) ;
+
+DEFINE __expr126 := (__expr125 & s.pfl) ;
+
+DEFINE __expr151 := case
+__expr143 : (__expr107 & __expr149);
+(__expr150 & s.maxRot) : __expr108;
+__expr147 : next(s.TRM.1);
+(s.TRM.1 & s.minRot) : __expr108;
+s.TRM.1 : next(s.TRM.1);
+TRUE : (__expr107 & case
+s.TRM.0 : next(s.TRM.0);
+TRUE : __expr149;
+esac);
+esac ;
+
+DEFINE __expr226 := case
+__expr193 : (__expr78 & __expr224);
+(__expr225 & s.gof) : __expr79;
+__expr137 : next(s.CHM.1);
+(s.CHM.1 & s.gob) : __expr79;
+s.CHM.1 : next(s.CHM.1);
+TRUE : (__expr78 & case
+s.CHM.0 : next(s.CHM.0);
+TRUE : __expr224;
+esac);
+esac ;
+
+DEFINE __expr204 := (__expr24 & !s.PM.0) ;
+
+DEFINE __expr194 := (next(s.brl) <-> (__expr193 | (!__expr175 & s.brl))) ;
+
+DEFINE __expr80 := (__expr74 & next(s.CVM.0)) ;
+
+DEFINE __expr223 := (next(s.pbl) <-> (((__expr216 & __expr70) & __expr71) | (!(__expr217 & s.pbl) & s.pbl))) ;
+
+DEFINE __expr22 := (__expr19 & !s.a2ext.0) ;
+
+DEFINE __expr95 := !__expr94 ;
+
+DEFINE __expr63 := (__expr14 | (__expr62 & monitor.LTL_0_SPECF_9)) ;
+
+DEFINE __expr232 := (next(s.gob) <-> (s.CHM.1 | (!__expr225 & s.gob))) ;
+
+DEFINE __expr179 := !next(s.RRM.0) ;
+
+DEFINE __expr103 := (__expr101 & __expr102) ;
+
+DEFINE __expr91 := !next(s.a2ext.0) ;
+
+DEFINE __expr197 := case
+((__expr39 & s.RRM.1) & (s.angle_status.1 & s.angle_status.0)) : __expr90;
+((__expr21 & s.RRM.1) & (!s.angle_status.1 & !s.angle_status.0)) : __expr83;
+((__expr15 & s.RRM.1) & (s.angle_status.1 & !s.angle_status.0)) : __expr96;
+((__expr32 & __expr183) & (!s.angle_status.1 & s.angle_status.0)) : __expr104;
+s.angle.1 : (next(s.angle.1) & __expr196);
+TRUE : (__expr82 & __expr196);
+esac ;
+
+DEFINE __expr128 := !s.tl ;
+
+DEFINE __expr33 := !s.A1M.1 ;
+
+DEFINE __expr124 := (!(__expr74 | (__expr75 | !next(s.gof))) | (__expr123 & next(monitor.LTL_0_SPECF_3))) ;
+
+DEFINE __expr62 := (__expr20 | (__expr61 & monitor.LTL_0_SPECF_11)) ;
+
+DEFINE __expr9 := !s.CMag.0 ;
+
+DEFINE __expr222 := (next(s.pbe) <-> (!__expr193 & (__expr218 | s.pbe))) ;
+
+DEFINE __expr212 := (next(s.fc) <-> ((__expr205 & s.pl) | (s.pl & s.fc))) ;
+
+DEFINE __expr129 := (__expr127 & __expr128) ;
+
+DEFINE __expr108 := (__expr107 & next(s.TRM.0)) ;
+
+DEFINE __expr74 := !next(s.CVM.1) ;
+
+DEFINE __expr221 := (next(s.crit) <-> (((__expr216 & __expr12) & s.pbl) | (!__expr218 & s.crit))) ;
+
+DEFINE __expr138 := (next(s.ff) <-> (__expr126 | (!__expr137 & s.ff))) ;
+
+DEFINE __expr6 := !s.CHM.1 ;
+
+DEFINE __expr198 := !next(s.angle_status.1) ;
+
+DEFINE __expr51 := !(s.FBM.0 | __expr50) ;
+
+DEFINE __expr234 := (__expr75 & next(s.gvp.0)) ;
+
+DEFINE __expr130 := (s.FBM.0 & __expr129) ;
+
+DEFINE __expr123 := (!(!next(s.gob) | (!__expr77 | (!__expr79 | (!__expr80 | (__expr81 | !next(s.pbe)))))) | (__expr122 & next(monitor.LTL_0_SPECF_5))) ;
+
+DEFINE __expr104 := (__expr82 & __expr89) ;
+
+DEFINE __expr133 := (!s.FBM.0 & s.deliv) ;
+
+DEFINE __expr61 := (__expr23 | (__expr60 & monitor.LTL_0_SPECF_13)) ;
+
+DEFINE __expr17 := (__expr16 & !s.A2M.0) ;
+
+DEFINE __expr2 := !s.gvp.1 ;
+
+DEFINE __expr165 := ((__expr32 & __expr34) & __expr37) ;
+
+DEFINE __expr213 := !next(s.press_status.1) ;
+
+DEFINE __expr209 := (s.botPosP & __expr204) ;
+
+DEFINE __expr50 := !s.deliv ;
+
+DEFINE __expr37 := (__expr36 & !s.a1ext.0) ;
+
+DEFINE __expr122 := (!(next(s.DBM.0) | !next(s.crit)) | (__expr121 & next(monitor.LTL_0_SPECF_7))) ;
+
+DEFINE __expr185 := !next(s.A1Mag.0) ;
+
+DEFINE __expr169 := (s.botPosP & __expr25) ;
+
+DEFINE __expr146 := (s.topPos & s.maxRot) ;
+
+DEFINE __expr60 := (__expr27 | (__expr59 & monitor.LTL_0_SPECF_15)) ;
+
+DEFINE __expr140 := ((__expr39 & s.A1M.1) & __expr139) ;
+
+DEFINE __expr97 := !next(s.A1M.1) ;
+
+DEFINE __expr81 := !next(s.CMag.0) ;
+
+DEFINE __expr14 := !(s.DBM.0 | s.crit) ;
+
+DEFINE __expr239 := case
+__expr227 : next(s.gripper_status.1);
+__expr136 : (__expr237 & __expr238);
+(__expr8 & __expr192) : (__expr237 & next(s.gripper_status.0));
+s.gripper_status.1 : next(s.gripper_status.1);
+TRUE : (__expr237 & case
+s.gripper_status.0 : next(s.gripper_status.0);
+TRUE : __expr238;
+esac);
+esac ;
+
+DEFINE __expr214 := !next(s.press_status.0) ;
+
+DEFINE __expr121 := (!(next(s.DBM.0) | next(s.crit)) | (__expr120 & next(monitor.LTL_0_SPECF_9))) ;
+
+DEFINE __expr176 := (__expr174 | __expr175) ;
+
+DEFINE __expr59 := (__expr29 | (__expr58 & monitor.LTL_0_SPECF_17)) ;
+
+DEFINE __expr227 := (__expr8 & __expr5) ;
+
+DEFINE __expr228 := !next(s.CVM.0) ;
+
+DEFINE __expr89 := !next(s.angle.0) ;
+
+DEFINE __expr73 := !(next(s.FBM.0) | next(s.deliv)) ;
+
+DEFINE __expr160 := (__expr146 & s.tl) ;
+
+DEFINE __expr84 := !next(s.A2M.1) ;
+
+DEFINE __expr49 := !(!s.botPos | (!s.minRot | __expr47)) ;
+
+DEFINE __expr23 := !(!__expr21 | (__expr18 | !__expr22)) ;
+
+DEFINE __expr192 := (__expr2 & s.gvp.0) ;
+
+DEFINE __expr77 := (__expr75 & __expr76) ;
+
+DEFINE __expr120 := (!(!__expr83 | (__expr87 | __expr88)) | (__expr119 & next(monitor.LTL_0_SPECF_11))) ;
+
+DEFINE __expr20 := !(!__expr15 | (__expr18 | __expr19)) ;
+
+DEFINE __expr173 := (__expr84 & next(s.A2M.0)) ;
+
+DEFINE __expr58 := (__expr31 | (__expr57 & monitor.LTL_0_SPECF_19)) ;
+
+DEFINE __expr7 := (__expr6 & s.CHM.0) ;
+
+DEFINE __expr183 := (__expr68 & !s.RRM.0) ;
+
+DEFINE __expr156 := (__expr19 & s.a2ext.0) ;
+
+DEFINE __expr15 := (!s.angle.1 & s.angle.0) ;
+
+DEFINE __expr182 := (__expr181 & s.A2Mag.0) ;
+
+DEFINE __expr131 := !next(s.FBM.0) ;
+
+DEFINE __expr27 := !(!s.botPosP | __expr26) ;
+
+DEFINE __expr4 := !(__expr1 | (__expr2 | __expr3)) ;
+
+DEFINE __expr136 := (__expr8 & s.gvp.1) ;
+
+DEFINE __expr16 := !s.A2M.1 ;
+
+DEFINE __expr206 := case
+(__expr169 & __expr163) : __expr203;
+((__expr163 & __expr204) & s.midPosP) : __expr94;
+(__expr162 & s.pl) : __expr203;
+((s.pl & __expr204) & s.topPosP) : __expr94;
+(__expr205 & s.fc) : next(s.PM.1);
+(s.PM.1 & s.botPosP) : __expr94;
+s.PM.1 : next(s.PM.1);
+TRUE : (__expr93 & case
+s.PM.0 : next(s.PM.0);
+TRUE : __expr202;
+esac);
+esac ;
+
+DEFINE __expr191 := (__expr1 & !s.CVM.0) ;
+
+DEFINE __expr42 := !s.maxRot ;
+
+DEFINE __expr119 := (!(!__expr90 | (__expr87 | !__expr92)) | (__expr118 & next(monitor.LTL_0_SPECF_13))) ;
+
+DEFINE __expr46 := (__expr45 & s.TRM.0) ;
+
+DEFINE __expr201 := case
+(__expr39 & __expr157) : (next(s.angle_status.1) & next(s.angle_status.0));
+(__expr21 & __expr157) : (__expr198 & __expr199);
+(__expr15 & __expr157) : (next(s.angle_status.1) & __expr199);
+(__expr32 & __expr157) : (__expr198 & next(s.angle_status.0));
+s.angle_status.1 : (next(s.angle_status.1) & __expr200);
+TRUE : (__expr198 & __expr200);
+esac ;
+
+DEFINE __expr92 := (__expr88 & __expr91) ;
+
+DEFINE __expr57 := (__expr38 | (__expr56 & monitor.LTL_0_SPECF_21)) ;
+
+DEFINE __expr139 := (__expr36 & s.a1ext.0) ;
+
+DEFINE __expr1 := !s.CVM.1 ;
+
+DEFINE __expr181 := ((__expr180 & s.RRM.1) & __expr161) ;
+
+DEFINE __expr174 := ((__expr21 & s.A2M.1) & __expr156) ;
+
+DEFINE __expr25 := (__expr24 & s.PM.0) ;
+
+DEFINE __expr155 := (next(s.minRot) <-> (s.TRM.1 | (!__expr150 & s.minRot))) ;
+
+DEFINE __expr0 := !(s.FBM.0 | s.deliv) ;
+
+DEFINE __expr207 := ((s.midPosP & __expr204) & s.press_status.1) ;
+
+DEFINE __expr93 := !next(s.PM.1) ;
+
+DEFINE __expr118 := (!(!next(s.botPosP) | __expr95) | (__expr117 & next(monitor.LTL_0_SPECF_15))) ;
+
+DEFINE __expr102 := !next(s.a1ext.0) ;
+
+DEFINE __expr145 := (__expr43 & !s.TEM.0) ;
+
+DEFINE __expr56 := (__expr40 | (__expr55 & monitor.LTL_0_SPECF_23)) ;
+
+DEFINE __expr28 := !s.topPosP ;
+
+DEFINE __expr3 := !s.gof ;
+
+DEFINE __expr216 := !s.DBM.0 ;
+
+DEFINE __expr38 := !(!__expr32 | (__expr35 | !__expr37)) ;
+
+DEFINE __expr203 := (__expr93 & __expr202) ;
+
+DEFINE __expr82 := !next(s.angle.1) ;
+
+DEFINE __expr190 := case
+__expr171 : __expr189;
+(__expr172 | s.A2Mag.0) : next(s.A2Mag.0);
+TRUE : __expr189;
+esac ;
+
+DEFINE __expr172 := ((__expr15 & __expr17) & s.a2ext.1) ;
+
+DEFINE __expr127 := (((s.botPos & s.minRot) & __expr44) & __expr46) ;
+
+DEFINE __expr117 := (!(!next(s.topPosP) | __expr95) | (__expr116 & next(monitor.LTL_0_SPECF_17))) ;
+
+DEFINE __expr18 := !__expr17 ;
+
+DEFINE __expr55 := (__expr48 | (__expr54 & monitor.LTL_0_SPECF_25)) ;
+
+DEFINE __expr29 := !(__expr28 | __expr26) ;
+
+DEFINE __expr5 := (__expr2 & !s.gvp.0) ;
+
+DEFINE __expr40 := !(!__expr39 | (__expr35 | __expr36)) ;
+
+DEFINE __expr200 := case
+s.angle_status.0 : next(s.angle_status.0);
+TRUE : __expr199;
+esac ;
+
+DEFINE __expr180 := (((__expr139 & __expr156) & __expr158) & __expr159) ;
+
+DEFINE __expr88 := !next(s.a2ext.1) ;
+
+DEFINE __expr78 := !next(s.CHM.1) ;
+
+DEFINE __expr218 := (__expr217 & __expr71) ;
+
+DEFINE __expr116 := (!(!next(s.midPosP) | __expr95) | (__expr115 & next(monitor.LTL_0_SPECF_19))) ;
+
+DEFINE __expr99 := (__expr97 & __expr98) ;
+
+DEFINE __expr215 := case
+__expr205 : (__expr213 & __expr214);
+__expr162 : next(s.press_status.1);
+__expr169 : (__expr213 & next(s.press_status.0));
+s.press_status.1 : next(s.press_status.1);
+TRUE : (__expr213 & case
+s.press_status.0 : next(s.press_status.0);
+TRUE : __expr214;
+esac);
+esac ;
+
+DEFINE __expr71 := !s.pbl ;
+
+DEFINE __expr54 := (__expr49 | (__expr53 & monitor.LTL_0_SPECF_27)) ;
+
+DEFINE __expr187 := (next(s.pl) <-> (!__expr174 & (__expr167 | s.pl))) ;
+
+DEFINE __expr137 := (((__expr136 & s.gof) & __expr7) & s.CMag.0) ;
+
+DEFINE __expr30 := !s.midPosP ;
+
+DEFINE __expr168 := case
+(((((((((__expr39 & __expr139) & __expr156) & __expr157) & __expr158) & __expr159) & s.A1Mag.0) & s.A2Mag.0) & __expr160) | ((((((((__expr32 & __expr139) & __expr156) & __expr157) & __expr158) & __expr159) & __expr161) & s.A2Mag.0) & (__expr162 & __expr163))) : __expr99;
+(__expr164 | __expr165) : __expr166;
+((((__expr39 & s.a1ext.1) & __expr158) & __expr161) | (((__expr32 & __expr37) & __expr158) & s.A1Mag.0)) : next(s.A1M.1);
+(__expr140 | __expr167) : __expr166;
+s.A1M.1 : next(s.A1M.1);
+TRUE : (__expr97 & case
+s.A1M.0 : next(s.A1M.0);
+TRUE : __expr98;
+esac);
+esac ;
+
+DEFINE __expr115 := (!(!__expr96 | (__expr100 | !__expr103)) | (__expr114 & next(monitor.LTL_0_SPECF_21))) ;
+
+DEFINE __expr105 := !next(s.TEM.1) ;
+
+DEFINE __expr90 := (next(s.angle.1) & __expr89) ;
+
+DEFINE __expr53 := (__expr51 | (__expr52 & monitor.LTL_0_SPECF_29)) ;
+
+DEFINE __expr68 := !s.RRM.1 ;
+
+DEFINE __expr188 := case
+(__expr34 & __expr39) : next(s.a1ext.1);
+(__expr34 & __expr32) : __expr103;
+s.A1M.1 : (__expr101 & next(s.a1ext.0));
+s.a1ext.1 : next(s.a1ext.1);
+TRUE : (__expr101 & case
+s.a1ext.0 : next(s.a1ext.0);
+TRUE : __expr102;
+esac);
+esac ;
+
+DEFINE __expr86 := (__expr84 & __expr85) ;
+
+DEFINE __expr193 := (__expr191 & __expr192) ;
+
+DEFINE __expr154 := (next(s.maxRot) <-> (__expr150 | (__expr45 & s.maxRot))) ;
+
+DEFINE __expr144 := !next(s.TEM.0) ;
+
+DEFINE __expr11 := !(!s.gob | (!__expr5 | (!__expr7 | (!__expr8 | (__expr9 | __expr10))))) ;
+
+DEFINE __expr235 := (s.gvp.1 & (__expr72 & !s.gripper_status.0)) ;
+
+DEFINE __expr162 := (s.midPosP & __expr25) ;
+
+DEFINE __expr31 := !(__expr30 | __expr26) ;
+
+DEFINE __expr205 := (s.topPosP & __expr25) ;
+
+DEFINE __expr114 := (!(!__expr104 | (__expr100 | __expr101)) | (__expr113 & next(monitor.LTL_0_SPECF_23))) ;
+
+DEFINE __expr36 := !s.a1ext.1 ;
+
+DEFINE __expr52 := (__expr0 | monitor.LTL_0_SPECF_31) ;
+

@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'partitioned-smc'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--release",
+                ],
+                "filter": {
+                    "name": "partitioned-smc",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "-a",
+                "partitioned",
+                "-p",
+                "4",
+                "--op",
+                "-v"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+    ]
+}
